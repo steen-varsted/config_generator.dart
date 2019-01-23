@@ -1,0 +1,5 @@
+.dart_tool
+.idea
+.packages
+config_generator.dart.iml
+**/*.g.dart

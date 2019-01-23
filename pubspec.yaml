@@ -1,0 +1,17 @@
+name: config_generator
+description: Generate implementation of config classes from build.yaml configuration
+version: 0.1.0
+homepage: https://github.com/steen-varsted/config_generator.dart/blob/master/README.md
+author: Steen Varsted <steen@varsted.dk>
+
+environment:
+  sdk: '>=2.0.0 <3.0.0'
+
+dependencies:
+  code_builder: ^3.1.3
+  source_gen: ^0.9.0
+
+dev_dependencies:
+  test: ^1.0.0
+  build_runner: ^1.0.0
+  build_test: any

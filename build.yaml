@@ -1,0 +1,21 @@
+targets:
+  $default:
+    builders:
+      config_generator|config_builder:
+        generate_for:
+          include: ["example/config.dart"]
+        enabled: true
+        options:
+          env: test
+          testInt: 3
+          firebase:
+            apiKey: xxx
+builders:
+  config_builder:
+    target: ':config_generator'
+    import: "package:config_generator/config_generator.dart"
+    builder_factories: ["configBuilder"]
+    build_extensions: {".dart": [".config_builder.g.part"]}
+    auto_apply: none
+    build_to: cache
+    applies_builders: ["source_gen|combining_builder"]
