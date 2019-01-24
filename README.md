@@ -29,7 +29,9 @@ that there should be a single toplevel class that is not used in any of the othe
 
 All classes in the class hierarchy should be `abstract`, and have a `const` noarg constructor.
 The only valid members are methods, and getters with a type of either `String`, `int` or a class defined in
-the same file. 
+the same file.
+
+The settings under `options` in the `build.<env>.yaml` should map to the class hierarchy. 
  
 ```dart
 part 'config.g.dart';
@@ -50,7 +52,7 @@ Build with `pub run build_runner build --config=<env>` where `<env>` is one of t
 you created a build file for.
 
 The build process will generate implementations of all the classes and a const value of the
-top level class with the name `config` and instantiated with the values from the `build.yaml` file.
+top level class with the name `config` and instantiated with the `options` values from the `build.yaml` file.
 This value can then be used in your code: 
 
 ```dart
